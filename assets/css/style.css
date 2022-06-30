@@ -1,3 +1,57 @@
-* {
-    font-family: Georgia, 'Times New Roman', Times, serif
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+    text-align: center;
+    /* word-wrap: break-word; */
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: dimgrey;
+    color:orangered;
 };
+
+h1 {
+    font-size: 150%;
+}
+
+form {
+    margin: auto;
+    padding: 30px;
+    border: 12px blue solid;
+    background-color: rgb(142, 221, 192);
+}
+
+.card {
+    display: block;
+    background-color:	#FFFFE0;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: 60px auto;
+    padding: 20px;
+    width: 80vw;
+}
+
+.card button {
+    width: 100%;
+    height: 15vh;
+    margin: 10px;
+    background-color: rgb(142, 221, 192);
+    padding: 10px;
+    border-radius: 8px;
+    cursor:pointer;
+    display: block;
+}
+
+.answer {
+    font-size: 150%;
+}
+
+@media screen {
+    
+}

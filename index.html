@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>WordGuesser</title>
+    <title>Quiz Game</title>
 </head>
 <body>
+    <header>
+        <h1>PopQuiz!</h1>
+        <button id="scoresTab"></button>
+        <div id="timer"></div>
+    </header>
 
+    <figure id="startButton"></figure>
+
+    <form class="card">
+        <label for="cardText" id="question"><h2>Question goes here:</h2></label>
+        <p>for the purpose of testing</p>
+        <button id="choiceA"><span class="answer">Answer1</span></button>
+        <button id="choiceB"><span class="answer">Answer2</span></button>
+        <button id="choiceC"><span class="answer">Answer3</span></button>
+        <button id="choiceD"><span class="answer">Answer4</span></button>
+    </form>
     
 
     <script src=".assets/js/script.js"></script>
