@@ -10,23 +10,37 @@
 </head>
 <body>
     <header>
-        <h1>PopQuiz!</h1>
-        <button id="scoresTab"></button>
-        <div id="timer"></div>
+        <h1 id = "lead">PopQuiz!</h1>
+        <div class="hideMe">
+            <button id="scoresBtn">Show High Score</button>
+            <div class = "card" id = "endOfGame"></div>
+        </div>
+        <div id="time-left">Time Remaining: 30</div>
     </header>
 
-    <figure id="startButton"></figure>
+    <div class = "card" id="start-window">
+        <button id="start-button">Press Start to Play!</button>
+    </div>
 
-    <form class="card">
-        <label for="cardText" id="question"><h2>Question goes here:</h2></label>
-        <p>for the purpose of testing</p>
-        <button id="choiceA"><span class="answer">Answer1</span></button>
-        <button id="choiceB"><span class="answer">Answer2</span></button>
-        <button id="choiceC"><span class="answer">Answer3</span></button>
-        <button id="choiceD"><span class="answer">Answer4</span></button>
+    <form class="card" id="quiz" >
+        <label for="cardText" id="question">
+            <h2>Question goes here:</h2>
+            <p>for the purpose of testing</p>
+        </label>
+
+        <button type = "button" id="answer1"><p class="answerBtn">Answer1</p></button>
+        <button type = "button" id="answer2"><p class="answerBtn">Answer2</p></button>
+        <button type = "button" id="answer3"><p class="answerBtn">Answer3</p></button>
+        <button type = "button" id="answer4"><p class="answerBtn">Answer4</p></button>
+        <p id="rightWrong"></p>
     </form>
+
+    <aside>
+        <ol></ol>
+    </aside>
+    
     
 
-    <script src=".assets/js/script.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 </html>

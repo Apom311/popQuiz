@@ -16,6 +16,7 @@ body {
 
 h1 {
     font-size: 150%;
+    position: relative;
 }
 
 form {
@@ -25,8 +26,11 @@ form {
     background-color: rgb(142, 221, 192);
 }
 
+.hideMe{
+    position:absolute;
+}
+
 .card {
-    display: block;
     background-color:	#FFFFE0;
     border: 1px solid #eceff1;
     border-radius: 8px;
@@ -37,7 +41,8 @@ form {
     width: 80vw;
 }
 
-.card button {
+.card button, 
+.card a{
     width: 100%;
     height: 15vh;
     margin: 10px;
@@ -46,10 +51,26 @@ form {
     border-radius: 8px;
     cursor:pointer;
     display: block;
+    position: relative;
+    word-wrap: break-word;
 }
 
-.answer {
+.answerBtn {
     font-size: 150%;
+}
+
+#timer {
+    text-align: right;
+}
+
+#endOfGame,
+#quiz,
+#time-left {
+    display:none;
+}
+
+#startWindow {
+    display:block;
 }
 
 @media screen {
