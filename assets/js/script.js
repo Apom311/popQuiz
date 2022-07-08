@@ -101,21 +101,13 @@ function setTime() {
             clearInterval(timerInterval);
             quizWindow.setAttribute("style", "display: none");
             header.setAttribute("style", "display: block");
-            // yourScore.textContent = "Your score is: " + secondsLeft;
             startQuiz.setAttribute("style", "display: none");
-            // submitButton.setAttribute("style", "display: inline");
-            // inputLine.setAttribute("style", "display: inline-block");
-        
             } else if (currentQuestion === 5) {
               clearInterval(timerInterval);
               console.log(secondsLeft);
               quizWindow.setAttribute("style", "display: none");
               header.setAttribute("style", "display: block");
-            //   yourScore.textContent = "Your score is: " + secondsLeft;
               startQuiz.setAttribute("style", "display: none");
-            //   submitButton.setAttribute("style", "display: inline");
-            //   inputLine.setAttribute("style", "display: inline-block");
-  
             }
  
     }, 1000);
@@ -138,7 +130,7 @@ function firstQuestion() {
       console.log("ohai");
       if (event.currentTarget.innerText === questions[currentQuestion].correct){
       correctAnswer.textContent = "Correct + 5 sec";
-      correctAnswer.setAttribute("style", "color: yellow");
+      correctAnswer.setAttribute("style", "color: red");
       secondsLeft = secondsLeft + 5;
       console.log("correct");
     } else {
