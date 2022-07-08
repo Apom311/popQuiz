@@ -10,10 +10,14 @@
 </head>
 <body>
     <header>
-        <h1 id = "lead">PopQuiz!</h1>
+        <h1 id = "lead">PoP QuiZ</h1>
         <div class="hideMe">
-            <button id="scoresBtn">Show High Score</button>
-            <div class = "card" id = "endOfGame"></div>
+            <button id="scoreBtn">Show High Score</button>
+            <div class = "card" id = "endOfGame">
+                <ol id="savedScores">
+                    <li>example</li>
+                </ol>
+            </div>
         </div>
         <div id="time-left">Time Remaining: 30</div>
     </header>
@@ -28,10 +32,10 @@
             <p>for the purpose of testing</p>
         </label>
 
-        <button type = "button" id="answer1"><p class="answerBtn">Answer1</p></button>
-        <button type = "button" id="answer2"><p class="answerBtn">Answer2</p></button>
-        <button type = "button" id="answer3"><p class="answerBtn">Answer3</p></button>
-        <button type = "button" id="answer4"><p class="answerBtn">Answer4</p></button>
+        <button type = "button" id="answer1" class="answerBtn">Answer1</button>
+        <button type = "button" id="answer2" class="answerBtn">Answer2</button>
+        <button type = "button" id="answer3" class="answerBtn">Answer3</button>
+        <button type = "button" id="answer4" class="answerBtn">Answer4</button>
         <p id="rightWrong"></p>
     </form>
 

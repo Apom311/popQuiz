@@ -6,11 +6,12 @@ var header = document.getElementById("lead");
 //time&score
 var timer = document.getElementById("time-left");
 var secondsLeft = 30;
-var scores = document.getElementById("scoreBtn");
+var scoreBtn = document.getElementById("scoreBtn");
 var scoreWindow = document.getElementById("endOfGame");
-var scoreAll = document.querySelector(".hideMe");
+var scoreTime = document.querySelector(".hideMe");
+var savedScores = document.getElementById("savedScores");
 //answers
-var answerText = document.querySelectorAll(".answerBtn");
+var answerBtn = document.querySelectorAll(".answerBtn");
 var answerA = document.getElementById("answer1");
 var answerB = document.getElementById("answer2");
 var answerC = document.getElementById("answer3");
@@ -71,10 +72,23 @@ function startGame() {
     quizWindow.setAttribute("style", "display: block");
     startWindow.setAttribute("style", "display: none");
     timer.setAttribute("style", "display: contents");
-    scoreAll.setAttribute("style", "display: none");
+    scoreTime.setAttribute("style", "display: none");
     header.setAttribute("style", "display: none");
+    scoreWindow.setAttribute("style", "display: none");
+    savedScores.setAttribute("style", "display: none");
     firstQuestion();
     setTime();
+}
+
+function showScore() {
+  quizWindow.setAttribute("style", "display: none");
+  startWindow.setAttribute("style", "display: none");
+  timer.setAttribute("style", "display: none");
+  scoreTime.setAttribute("style", "display: none");
+  header.setAttribute("style", "display: block");
+  scoreWindow.setAttribute("style", "display: block");
+  savedScores.setAttribute("style", "display: inline-block")
+
 }
 //clock function
 function setTime() {
@@ -86,7 +100,7 @@ function setTime() {
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
             quizWindow.setAttribute("style", "display: none");
-             header.setAttribute("style", "display: block");
+            header.setAttribute("style", "display: block");
             // yourScore.textContent = "Your score is: " + secondsLeft;
             startQuiz.setAttribute("style", "display: none");
             // submitButton.setAttribute("style", "display: inline");
@@ -118,10 +132,11 @@ function firstQuestion() {
   }
 
   // Event listener for buttons and q/a
-  for (var i = 0; i < answerText.length; i++) {
-    answerText[i].addEventListener("click", function userAnswer(event) {
+  for (var i = 0; i < answerBtn.length; i++) {
+    answerBtn[i].addEventListener("click", function userAnswer(event) {
       event.stopPropagation();
-      if (event.target.innerText === questions[currentQuestion].correct){
+      console.log("ohai");
+      if (event.currentTarget.innerText === questions[currentQuestion].correct){
       correctAnswer.textContent = "Correct + 5 sec";
       correctAnswer.setAttribute("style", "color: yellow");
       secondsLeft = secondsLeft + 5;
@@ -143,4 +158,5 @@ function firstQuestion() {
   }
 //calling my funcitons
 startQuiz.addEventListener("click", startGame);
-
+console.log(scoreBtn);
+scoreBtn.addEventListener("click", showScore);
